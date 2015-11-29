@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logic;
+package logic;
 
 /**
  *
@@ -55,7 +55,6 @@ public class ITClient {
         String serverAddress = JOptionPane.showInputDialog(
             frame,
             "Enter IP Address of the Server:",
-            "Welcome to the Capitalization Program",
             JOptionPane.QUESTION_MESSAGE);
 
         // Make connection and initialize streams
@@ -75,21 +74,24 @@ public class ITClient {
      * @param args
      * @throws java.lang.Exception
      */
-    /*public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         ITClient client = new ITClient();
         client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         client.frame.pack();
         client.frame.setVisible(true);
         client.iTConnect();
-    }*/
+    }
 
     private class ActionListenerImpl implements ActionListener {
+        private Object cal;
+        private Object dateFormat;
 
         public ActionListenerImpl() {
         }
 
         @Override
         public void actionPerformed(ActionEvent e){
+            out.println("");
             out.println(dataField.getText());
             String response;
             try{

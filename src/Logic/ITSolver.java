@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logic;
+package logic;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,12 +37,13 @@ public class ITSolver extends Thread{
             while(true){
                 String input;
                 input = in.readLine();
-                if(input.equals(".")){
+                if(input.equals("exit")){
                     break;
                 }
-                out.println("I must capitalize");
-                System.out.println(input);
                 out.println(input.toUpperCase());
+                System.out.println(input);
+               
+                //out.println(input.toUpperCase());
             }
         } catch(IOException e){
             log("Error handling client# "+clientNumber+".");
